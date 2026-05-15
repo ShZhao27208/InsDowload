@@ -1,0 +1,58 @@
+.insdownload-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 4px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.2s, transform 0.15s;
+  z-index: 10;
+}
+
+.insdownload-btn:hover {
+  background: rgba(0, 0, 0, 0.08);
+  transform: scale(1.1);
+}
+
+.insdownload-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.insdownload-loading {
+  opacity: 0.5;
+  pointer-events: none;
+  animation: insdownload-spin 1s linear infinite;
+}
+
+.insdownload-done {
+  color: #4caf50;
+}
+
+@keyframes insdownload-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#insdownload-float {
+  width: 48px !important;
+  height: 48px !important;
+}
+
+#insdownload-float:hover {
+  transform: scale(1.1);
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) !important;
+}
+
+#insdownload-float.insdownload-done {
+  background: #4caf50 !important;
+}
+
+#insdownload-float.insdownload-loading {
+  opacity: 0.7;
+}

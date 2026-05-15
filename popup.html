@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InsDowload</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>InsDowload</h1>
+      <span class="version">v1.0.0</span>
+    </header>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="download">Download</button>
+      <button class="tab" data-tab="settings">Settings</button>
+    </div>
+
+    <section id="tab-download" class="tab-content active">
+      <div id="current-post" style="display:none">
+        <button id="btn-current" class="btn-primary">Download Current Post</button>
+        <p class="status" id="current-status"></p>
+        <hr style="margin:12px 0;border:none;border-top:1px solid #dbdbdb;">
+      </div>
+
+      <div class="field">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="e.g. instagram">
+      </div>
+
+      <div class="field">
+        <label>Download Type</label>
+        <div class="btn-group">
+          <button class="type-btn active" data-type="posts">Posts</button>
+          <button class="type-btn" data-type="reels">Reels</button>
+          <button class="type-btn" data-type="tagged">Tagged</button>
+        </div>
+      </div>
+
+      <button id="btn-start" class="btn-primary">Start Download</button>
+      <button id="btn-stop" class="btn-danger" style="display:none">Stop</button>
+
+      <div id="progress-section" style="display:none">
+        <div class="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <p class="progress-text" id="progress-text">0 / 0</p>
+      </div>
+
+      <div id="status" class="status"></div>
+    </section>
+
+    <section id="tab-settings" class="tab-content">
+      <div class="field">
+        <label for="folder">Save Folder (relative to download dir)</label>
+        <input type="text" id="folder" placeholder="Instagram">
+        <small class="hint">e.g. "douyin" saves to [Downloads]/douyin/</small>
+      </div>
+      <div class="field">
+        <label>
+          <input type="checkbox" id="subfolder" checked>
+          Create subfolder per user
+        </label>
+      </div>
+      <div class="field">
+        <label for="concurrent">Concurrent Downloads</label>
+        <input type="number" id="concurrent" min="1" max="5" value="3">
+      </div>
+      <button id="btn-save" class="btn-primary">Save Settings</button>
+    </section>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
