@@ -172,6 +172,10 @@ InsDowload/
 | Batch download stops | Instagram rate limiting — wait a few minutes and retry |
 | "No media found" error | The post may be from a private account you don't follow |
 
+### Legal and Responsible Use
+
+This project is provided for educational and technical research purposes only. It must not be used for commercial activities, copyright infringement, unauthorized redistribution, piracy, or downloading resources without permission from the rights holder. Users are responsible for complying with Instagram's terms of service, applicable laws, and the rights of content creators.
+
 ### Limitations
 
 - Requires an active Instagram login session
@@ -340,6 +344,10 @@ InsDowload/
 | 轮播帖只下载了 2 张 | API 可能已变更，检查 Service Worker 控制台错误 |
 | 批量下载中途停止 | Instagram 限流，等几分钟后重试 |
 | 提示"No media found" | 帖子可能来自你未关注的私密账号 |
+
+### 合规使用声明
+
+本项目仅用于教学、学习和技术研究用途。不得用于任何商业活动，不得用于侵犯版权、未经授权的传播、盗版资源获取，或在未获得权利人许可的情况下下载和分发内容。使用者应自行遵守 Instagram 服务条款、所在地法律法规以及内容创作者的合法权益。
 
 ### 限制
 
