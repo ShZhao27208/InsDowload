@@ -15,12 +15,6 @@ A lightweight Edge/Chrome extension to download Instagram photos, videos, Reels,
 
 <a id="english"></a>
 
-[English](#english) | [中文](#中文)
-
----
-
-<a id="english"></a>
-
 ## English
 
 ### Features
