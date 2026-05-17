@@ -66,7 +66,12 @@ function downloadFile(url, filename) {
 }
 
 function sanitize(name) {
-  return name.replace(/[<>:"/\\|?*]/g, '_').substring(0, 200);
+  return name
+    .replace(/[\x00-\x1f\x7f]/g, '')     // control chars (newlines, tabs, etc.)
+    .replace(/[<>:"/\\|?*@#]/g, '_')      // OS-illegal + problematic chars
+    .replace(/\s+/g, ' ')                 // collapse whitespace
+    .trim()
+    .substring(0, 200);
 }
 
 function buildPath(username, url, index, timestamp, caption) {
