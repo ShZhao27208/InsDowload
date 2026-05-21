@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "InsDowload",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Download Instagram photos, videos, Reels, and Stories with no limits.",
   "permissions": ["storage", "downloads", "cookies", "scripting", "activeTab"],
   "host_permissions": ["*://*.instagram.com/*"],

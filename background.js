@@ -67,11 +67,13 @@ function downloadFile(url, filename) {
 
 function sanitize(name) {
   return name
-    .replace(/[\x00-\x1f\x7f]/g, '')     // control chars (newlines, tabs, etc.)
-    .replace(/[<>:"/\\|?*@#]/g, '_')      // OS-illegal + problematic chars
-    .replace(/\s+/g, ' ')                 // collapse whitespace
-    .trim()
-    .substring(0, 200);
+    .replace(/[^\w\s\-.,()[\]{}!+='~\u00C0-\u024F\u0400-\u04FF\u3040-\u309F\u30A0-\u30FF\u3400-\u4DBF\u4E00-\u9FFF\uAC00-\uD7AF]/gu, '')
+    .replace(/[<>:"/\\|?*@#]/g, '_')
+    .replace(/\s+/g, ' ')
+    .replace(/_+/g, '_')
+    .replace(/\.{2,}/g, '.')
+    .replace(/^[.\s_]+|[.\s_]+$/g, '')
+    .substring(0, 200) || 'untitled';
 }
 
 function buildPath(username, url, index, timestamp, caption) {
